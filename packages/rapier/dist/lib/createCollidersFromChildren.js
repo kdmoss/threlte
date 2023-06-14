@@ -82,6 +82,8 @@ export const createCollidersFromChildren = (object, collidersType, world, rigidB
                     }
                     break;
             }
+            if (!description)
+                return colliders;
             description
                 .setTranslation(x + offset.x, y + offset.y, z + offset.z)
                 .setRotation({ x: rx, y: ry, z: rz, w: rw })
