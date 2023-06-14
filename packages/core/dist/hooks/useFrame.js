@@ -29,11 +29,11 @@ export const useFrame = (fn, options) => {
     };
     const started = writable(false);
     const stop = () => {
-        renderCtx.frameHandlers.delete(handler);
+        renderCtx?.frameHandlers?.delete(handler);
         started.set(false);
     };
     const start = () => {
-        renderCtx.frameHandlers.add(handler);
+        renderCtx?.frameHandlers?.add(handler);
         started.set(true);
     };
     if (options?.autostart ?? true) {
